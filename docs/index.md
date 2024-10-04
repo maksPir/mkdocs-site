@@ -1,4 +1,4 @@
-# Hello world from Maxim! TEEST
+# Hello world from Maxim! TEEST FROM ACTIONS
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
