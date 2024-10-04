@@ -11,9 +11,10 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build:
+    name: Build and Deploy
     runs-on: ubuntu-latest
-    enviroment:
+    environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url}}
 
