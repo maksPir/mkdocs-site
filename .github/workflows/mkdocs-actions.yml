@@ -11,8 +11,7 @@ permissions:
   id-token: write
 
 jobs:
-  build:
-    name: Build and Deploy
+  deploy:
     runs-on: ubuntu-latest
     enviroment:
       name: github-pages
