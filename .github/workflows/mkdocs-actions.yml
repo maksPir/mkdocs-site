@@ -14,10 +14,13 @@ jobs:
   build:
     name: Build and Deploy
     runs-on: ubuntu-latest
+    enviroment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url}}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Python Setup
         uses: actions/setup-python@v4
@@ -29,6 +32,10 @@ jobs:
 
       - name: Build
         run: mkdocs build
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
